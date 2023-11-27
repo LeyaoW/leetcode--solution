@@ -19,7 +19,7 @@ class Solution(object):
     def searchCols(self, image, i, j, top, bottom, opt):
         while i < j:
             mid = i + (j - i) / 2
-            if any([image[k][mid] == "1" for k in xrange(top, bottom)]) == opt:
+            if any(image[k][mid] == "1" for k in xrange(top, bottom)) == opt:
                 j = mid
             else:
                 i = mid + 1
