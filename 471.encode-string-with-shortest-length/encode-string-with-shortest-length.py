@@ -1,9 +1,10 @@
 class Solution(object):
-    def encode(self, s, dp = {}):
+    def encode(self, s, dp = None):
         """
         :type s: str
         :rtype: str
         """
+        dp = {} if dp is None else dp
         if len(s) < 5:
             return s
         elif s in dp:
