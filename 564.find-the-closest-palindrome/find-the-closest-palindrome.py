@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: str
         """
         l = len(n)
-        cands = set([str(10**l + 1), str(10**(l-1) - 1)])
+        cands = {str(10**l + 1), str(10**(l-1) - 1)}
         prefix = int(n[:(l + 1) / 2])
         for half in map(str, [prefix - 1, prefix, prefix + 1]):
             cands.add(half + [half, half[:-1]][l & 1][::-1])

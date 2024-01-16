@@ -5,7 +5,7 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        vowels = set(["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"])
+        vowels = {"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"}
         s = list(s)
         start, end = 0, len(s) - 1
         while start < end:

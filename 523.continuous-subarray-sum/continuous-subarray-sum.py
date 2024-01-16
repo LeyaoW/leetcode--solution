@@ -13,7 +13,7 @@ class Solution(object):
             return sum(nums) % k == 0
         ppSum = 0
         subSum = nums[0] + nums[1]
-        d = set([0])
+        d = {0}
         for i in range(2, len(nums)):
             ppSum = (ppSum + nums[i-2]) % k
             d |= {ppSum}

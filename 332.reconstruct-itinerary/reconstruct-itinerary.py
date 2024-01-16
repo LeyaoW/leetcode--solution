@@ -7,7 +7,7 @@ class Solution(object):
         :rtype: List[str]
         """
         graph = {}
-        hashset = set([])
+        hashset = set()
         for ticket in tickets:
             graph[ticket[0]] = graph.get(ticket[0], []) + [ticket[1]]
         

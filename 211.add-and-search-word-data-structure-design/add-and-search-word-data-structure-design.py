@@ -24,7 +24,7 @@ class Trie:
 class WordDictionary:
     def __init__(self):
         self.trie = Trie()
-        self.cache = set([])
+        self.cache = set()
 
     def addWord(self, word):
         self.trie.addWord(word)

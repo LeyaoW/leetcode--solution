@@ -16,7 +16,7 @@ class Graph(object):
         if node1 == node2:
             return 1.0
         queue = deque([(node1, 1)])
-        visited = set([node1.label])
+        visited = {node1.label}
         while queue:
             node, ans = queue.popleft()
             for nbr in node.nbrs:

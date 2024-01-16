@@ -24,7 +24,7 @@ class Solution(object):
                     
         candidates.sort()
         res = []
-        visited = set([])
+        visited = set()
         dfs(candidates, target, 0, visited, [], res)
         return res
         

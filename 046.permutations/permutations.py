@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         res = []
-        visited = set([])
+        visited = set()
         def dfs(nums, path, res, visited):
             if len(path) == len(nums):
                 res.append(path + [])
