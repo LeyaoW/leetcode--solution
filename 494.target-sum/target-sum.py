@@ -1,11 +1,13 @@
 class Solution(object):
-    def findTargetSumWays(self, nums, S, visited = {}, index = 0):
+    def findTargetSumWays(self, nums, S, visited = None, index = 0):
         """
         :type nums: List[int]
         :type S: int
         :rtype: int
         """
-        def helper(nums, S, visited = {}, index = 0):
+        visited = {} if visited is None else visited
+        def helper(nums, S, visited = None, index = 0):
+            visited = {} if visited is None else visited
             if (index, S) in visited:
                 return visited[index, S]
             ans = 0
