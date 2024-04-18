@@ -13,7 +13,7 @@ class SnakeGame(object):
         :type food: List[List[int]]
         """
         self.snake = deque([(0, 0)])
-        self.snakeSet = set([(0, 0)])
+        self.snakeSet = {(0, 0)}
         self.width = width
         self.height = height
         self.food = deque(food)

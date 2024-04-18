@@ -33,7 +33,7 @@ class Solution:
         # Write your code here
         if len(board) == 0:
             return
-        regions = set([])
+        regions = set()
         n, m = len(board), len(board[0])
         uf = UnionFind(len(board[0]), len(board))
         directions = {"u": (-1, 0), "d": (1, 0), "l": (0, -1), "r": (0, 1)}
