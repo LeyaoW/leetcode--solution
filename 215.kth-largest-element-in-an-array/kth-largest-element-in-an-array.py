@@ -1,4 +1,4 @@
-import random
+import secrets
 
 class Solution(object):
     def findKthLargest(self, nums, k):
@@ -21,7 +21,7 @@ class Solution(object):
                 return quickselect(start, mid - 1, nums, k)
         
         def partition(start, end, nums):
-            p = random.randrange(start, end + 1)
+            p = secrets.SystemRandom().randrange(start, end + 1)
             pv = nums[p]
             nums[end], nums[p] = nums[p], nums[end]
             mid = start
@@ -37,7 +37,7 @@ class Solution(object):
             
             
     def partition(start, end, nums):
-        p = random.randrange(start, end + 1)
+        p = secrets.SystemRandom().randrange(start, end + 1)
         pv = nums[p]
         nums[end], nums[p] = nums[p], nums[end]
         mid = start
