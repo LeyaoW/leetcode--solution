@@ -3,7 +3,8 @@
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
-import random
+import secrets
+
 class Solution(object):
 
     def __init__(self, head):
@@ -24,7 +25,7 @@ class Solution(object):
         head = self.head
         idx = 1
         while head:
-            if random.randrange(1, idx + 1) == idx:
+            if secrets.SystemRandom().randrange(1, idx + 1) == idx:
                 ans = head.val
             head = head.next
             idx += 1
